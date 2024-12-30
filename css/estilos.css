@@ -1,7 +1,10 @@
-.background-index {
+.background-section {
   background-image: url(/img/hero-image-home.jpg);
 }
 
+.background-section-2 {
+  background-image: url(/img/post-fast-fashion.jpg);
+}
 
 footer {
   background: black;
