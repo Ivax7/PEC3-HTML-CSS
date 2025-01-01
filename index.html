@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/estilos.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <title>Inicio</title>
 </head>
 <body>
@@ -16,63 +16,67 @@
     <a href="index.html"><img src="img/logotip.svg" alt="Logo de naturaeHub"></a>
     <nav>
       <a href="tema-del-mes.html"><p>Tema del mes</p></a>
-      |<a href="blog.html"><p>Blog</p></a>
+      <a href="blog.html"><p>Blog</p></a>
     </nav>
   </header>
 
   <section class="background-section-index">
-    <h1>Naturae Hub</h1>
-    <p>Un espacio para los defensores del medio ambiente</p>
-    <p>Foto de <a href="https://unsplash.com/@ideasboom?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Qingbao Meng</a> en <a href="https://unsplash.com/photos/birds-eye-view-photograph-of-green-mountains-01_igFr7hd4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+    <div class="text">
+      <h1>Naturae Hub</h1>
+      <p class="subtitulo">Un espacio para los defensores del medio ambiente</p>
+    </div>
+    <p class="font">Foto de <a href="https://unsplash.com/@ideasboom?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Qingbao Meng</a> en <a href="https://unsplash.com/photos/birds-eye-view-photograph-of-green-mountains-01_igFr7hd4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
   </section>
 
   <main>
-    <section>
-      <h2>¿Qué es Nature Hub?</h2>
-      <article>
-        <p>Naturae Hub es un espacio digital donde la belleza y el poder del entorno natural se quieren encontrar con la acción, el aprendizaje y la conciencia ambiental.
+    <section class="intro">
+      <article class="first-article">
+        <h2>¿Qué es Nature Hub?</h2>
+        <p><strong>Naturae Hub</strong> es un espacio digital donde la belleza y el poder del entorno natural se quieren encontrar con la acción, el aprendizaje y la conciencia ambiental.
           <br>
         Inspirar y educar es lo que persigue <strong>Naturae Hub</strong>, porque las personas deben vivir en consonancia con la naturaleza.</p>
       </article>
 
-      <article>
+      <article class="form-article">
         <p>Sé parte del cambio, <span>suscríbete a nuestra newsletter.</span></p>
         <form action="" method="get">
-          <label for="name"></label>
+          <label for="name">Nombre</label>
           <input id="name" type="text">
 
-          <label for="email"></label>
+          <label for="email">Correo electrónico</label>
           <input id="email" type="email">
 
-          <p>Antes de enviar tus datos consulta nuestra <a href="">política de privacidad</a></p>
+          <p class="politica-privacidad">Antes de enviar tus datos consulta nuestra <a href="">política de privacidad</a></p>
 
-          <label for="checkbox">He leído y acepto la política de privacidad</label>
-          <input type="checkbox" name="checkbox" id="checkbox">
+          <div>
+            <input type="checkbox" name="checkbox" id="checkbox">
+            <label for="checkbox">He leído y acepto la política de privacidad</label>
+          </div>
 
-          <input type="submit" value="Suscíbeme">
+          <input type="submit" value="Suscríbeme">
         </form>
       </article>
     </section>
     
-    <section>
+    <section class="historias">
       <h2>Historias de cambio</h2>
       <p>Historias de personas y comunidades que con sus iniciativas están marcando la diferencia en la protección y conservación del medio ambiente. Si conoces otras historias o eres su protagonista, <a href="historias@naturaehub.org">cuéntanoslo</a>.</p>
       
       <article>
-        <div>
+        <div class="bloque">
           <a href="">Creando bosques urbanos</a>
           <p>Un grupo de estudiantes decidió plantar árboles en terrenos descuidados de su ciudad; querían transformar áreas grises e insalubres en pulmones verdes…</p>
-          <a href="">Saber más</a>
+          <button><a href="">Saber más</a></button>
         </div>
-        <div>
+        <div class="bloque">
           <a href="">Un refugio para las abejas</a>
           <p>Los vecinos de Vallrosada han decidido enfrentarse a la disminución de las abejas. Han recuperado terrenos baldíos, los han plantado de flores y han construido una granja de apicultura comunitaria…</p>
-          <a href="">Saber más</a>
+          <button><a href="">Saber más</a></button>
         </div>
-        <div>
+        <div class="bloque">
           <a href="">Convertir un río en un oasis de vida</a>
           <p>Su río había sido devastado por la contaminación. La determinación de todo el pueblo ha conseguido rescatarlo; hoy es un ejemplo de cómo es posible recuperar un ecosistema…</p>
-          <a href="">Saber más</a>
+          <button><a href="">Saber más</a></button>
         </div>
       </article>
     </section>
@@ -83,16 +87,18 @@
   <footer class="footer">
       <div class="footer-left">
         <img src="img/logotip-n.svg" alt="">
-        <p>© 2024-2025, Nombre y apellidos del estudiante</p>
-      </div>
-      <div class="footer-social">
-        <a href=""><img src="instagram-icon.svg" alt="Instagram"></a>
-        <a href=""><img src="youtube-icon.svg" alt="YouTube"></a>
+        <p>© 2024-2025, Xavi Serrano Salvador</p>
       </div>
       <div class="footer-right">
-        <a href="">Política de privacidad</a> |
-        <a href="">Política de cookies</a> |
-        <a href="">Aviso legal</a>
+        <div class="footer-social">    
+          <a href=""><img src="img/instagram.svg" alt="Instagram"></a>
+          <a href=""><img src="img/youtube.svg" alt="YouTube"></a>
+        </div>
+        <div class="footer-politics">
+          <a href="">Política de privacidad</a>
+          <a href="">Política de cookies</a>
+          <a href="">Aviso legal</a>
+        </div>
       </div>
   </footer>
 </body>

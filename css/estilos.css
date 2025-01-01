@@ -1,13 +1,3 @@
-
-
-
-*, *::before, *::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Alegreya";
-}
-
 :root {
   --var-negro: rgb(0, 0, 0);
   --var-blanco: rgb(255, 255, 255);
@@ -16,6 +6,23 @@
   --var-beige-modificado: rgba(242, 242, 230, 0.7);
 }
 
+
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Alegreya Sans";
+}
+
+body {
+  background-color: var(--var-beige);
+}
+
+
+span {
+  font-weight: bold;
+}
 
 a {
   text-decoration: none;
@@ -32,6 +39,7 @@ a::after {
 
 footer {
   background: black;
+  width: 100%;
 }
 
 
@@ -41,7 +49,10 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 50px;
+  background-color: var(--var-blanco);
+  width: 100%;
 }
+
 
 img {
   width: fit-content;
@@ -57,14 +68,32 @@ nav a {
   text-transform: uppercase;
   padding-inline: 10px;
   transition: all .2s ease-in-out;
+  font-weight: 600;
 }
 
-a:hover {
+nav a:first-child {
+  border-right: 1px solid;
+}
+
+nav a:hover {
   color: var(--var-verde);
 }
 
+
+.text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-top: -12px;  
+}
+
 h1 { 
-  font-size: 44px;
+  font-size: 82px;
+}
+
+.subtitulo {
+  font-size: 48px;
 }
 
 .background-section-index {
@@ -74,22 +103,269 @@ h1 {
   align-items: center;
   justify-content: center;
   background-size: cover;
-  height: 350px;
+  height: 525px;
   background-position: center;
   flex-direction: column;
   color: var(--var-blanco);
 }
 
-.background-section-index p:last-child {
+.font {
   position: absolute;
-  right:0;
-  bottom: 10px;
+  right: 15px;
+  bottom: 15px;
   color: var(--var-negro);
-  background-color: var(--var-beige);
-  padding: 5px;
-  font-size: 8px;
+  background-color: var(--var-beige-modificado);
+  padding: 10px;
+  font-size: 14px;
 }
 
-.background-section-index a {
-  text-decoration: underline dashed;
+p a {
+  border-bottom: 1px dotted;
+}
+
+p a:hover {
+  border-bottom: 1px solid;
+}
+
+main {
+  width: 1140px;
+  margin: auto;
+}
+
+h2 {
+  padding-block: 50px 35px;
+  font-size: 40px;
+}
+
+.intro {
+  display: flex;
+  padding-bottom: 100px;
+  gap: 115px;
+}
+
+main p {
+  line-height: 1.6;
+  font-size: 24px;
+}
+
+.first-article {
+  width: 60%;
+}
+
+.form-article {
+  margin-top: 135px;
+  width: 40%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+form label {
+  font-size: 16px;
+  margin: 0;
+}
+
+form input {
+  outline: none;
+  border: none;
+  padding: 10px;
+}
+
+.form-article .politica-privacidad {
+  font-size: 14px;
+}
+
+form div {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  justify-content: start;
+}
+
+input[type=submit] {
+  background-color: transparent;
+  border: 1px solid var(--var-negro);
+  display: block;
+  font-size: 18px;
+  width: 100px;
+}
+
+
+.historias p {
+  padding-right: 30px;
+}
+
+.historias article {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 30px;
+  padding-bottom: 100px;
+}
+
+.bloque {
+  position: relative;
+  margin-top: 35px;
+  background-color: var(--var-blanco);
+  padding: 20px;
+  width: 350px;
+  height: auto;
+}
+
+.bloque p {
+  line-height: 1.6;
+  font-size: 20px;
+  margin-top: 20px;
+  padding-right: 18px;
+  margin-bottom: 50px;
+}
+
+.bloque a {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.bloque button {
+  position: absolute;
+  padding: 5px;
+  background-color: transparent;
+  border: 1px solid black;
+  bottom: 25px;
+}
+
+.bloque button a {
+  font-weight: 500;
+  font-size: 16px;
+  padding: 5px;
+  line-height: 1.6;
+}
+
+
+footer {
+  color: var(--var-blanco);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px 50px;
+}
+
+footer a {
+  color: var(--var-blanco);
+}
+
+.footer-left, .footer-politics{
+  font-size: 12px;
+
+}
+
+.footer-left img {
+  padding-bottom: 10px;
+}
+
+footer a img {
+  width: 20px;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.footer-politics a {
+  border-right: 1px solid;
+  padding-inline: 5px;
+}
+
+.footer-politics a:last-child {
+  border-right: none;
+}
+
+
+@media (width <= 1024px) {
+  header, nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav a {
+    margin-block: 5px;
+  }
+
+  nav a:first-child {
+    border-right: none;
+  }
+  
+  main {
+    width: 100%;
+    padding-inline: 30px;
+  }
+
+  main p {
+    font-size: 18px;
+  }
+  
+  .intro {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 30px;
+  }
+
+  .form-article {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .first-article {
+    width: 100%;
+  }
+
+  input {
+    width: 80%;
+  }
+
+  form div input{
+    width: 2%;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+  }
+
+  .bloque p {
+    line-height: 1.6;
+    font-size: 17px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding-right: 0;
+  }
+
+
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-social {
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .footer-politics {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-politics a {
+    border-right: none;
+  }
+
 }
