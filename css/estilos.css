@@ -26,7 +26,7 @@ span {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: var(--var-negro);
 }
 
 a::after {
@@ -42,7 +42,6 @@ footer {
   width: 100%;
 }
 
-
 header {
   display: flex;
   padding-inline: 50px;
@@ -53,10 +52,9 @@ header {
   width: 100%;
 }
 
-
 img {
   width: fit-content;
-  width: 150px;
+  width: 200px;
 }
 
 nav {
@@ -64,14 +62,14 @@ nav {
 }
 
 nav a {
-  font-size: 12px;
+  font-size: 14px;
   text-transform: uppercase;
   padding-inline: 10px;
   transition: all .2s ease-in-out;
   font-weight: 600;
 }
 
-nav a:first-child {
+.tema {
   border-right: 1px solid;
 }
 
@@ -192,6 +190,7 @@ input[type=submit] {
   display: block;
   font-size: 18px;
   width: 100px;
+  padding-block: 5px;
 }
 
 
@@ -366,6 +365,193 @@ footer a img {
 
   .footer-politics a {
     border-right: none;
+  }
+
+}
+
+
+
+@media (width <= 430px) {
+
+  input {
+    width: 100%;
+  }
+
+  form div input{
+    width: 20px;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+  }
+
+  .historias article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 100px;
+  }
+}
+
+
+
+/* Tema del mes */
+
+h1 span {
+  background-color: var(--var-verde);
+  color: var(--var-blanco);
+  padding-inline: 20px;
+}
+
+.content {
+  display: flex;
+}
+
+aside nav {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 60px 100px 0 50px;
+  margin-right: 100px;
+}
+
+aside nav li {
+  list-style: none;
+}
+aside nav li a {
+  text-transform: capitalize;
+}
+
+.tema-titulo {
+  text-align: center;
+  padding: 20px;
+}
+
+.tema-subtitulo {
+  text-align: center;
+  padding: 0;
+  padding-bottom: 10px;
+}
+
+.animales-peligro {
+  width: 100%;
+}
+
+.lista-animales article {
+  display: flex;
+  padding: 50px;
+}
+
+.numeracion {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+.lista-animales article div {
+  width: 300px;
+  margin-left: 50px;
+  margin-right: 40px;
+}
+
+.nombre-animal {
+  font-size: 26px;
+}
+.estado {
+  font-size: 14px;
+}
+
+figure {
+  width: 400px;
+  justify-content: center;
+}
+
+figure img {
+  width: 400px;
+  border: 10px solid var(--var-blanco);
+}
+
+figure figcaption p{
+  font-size: 12px;
+}
+
+.descripcion {
+  flex: 1;
+  margin-left: 40px;
+}
+.descripcion p {
+  font-size: 20px;
+
+}
+
+@media (width <= 1024px) {
+
+  .tema-titulo {
+    font-size: 36px;
+  }
+
+  .tema-subtitulo {
+    font-size: 30px;
+  }
+
+  .content{
+    flex-direction: column;
+  }
+
+  aside nav {
+    justify-content: center;
+    flex-direction: row;
+    padding-block: 10px;
+    margin: 0;
+  }
+
+  aside nav li a {
+    font-size: 12px;
+  }
+
+
+  .lista-animales article {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+
+
+  figure {
+    width: 100%;
+    justify-content: center;
+  }
+
+  figure img {
+    width: 100%;
+  }
+
+  .animales-peligro {
+    padding-inline: 10px;
+  }
+
+  .lista-animales article {
+    margin-bottom: 50px;
+  }
+  
+  .lista-animales article:last-child {
+    margin-bottom: 100px;
+  }
+  
+  .lista-animales article div {
+    width: 100%;
+    margin: 0;
+    margin-inline: 10px;
+  }
+}
+
+
+@media (width <= 430px) {
+
+  .tema-titulo {
+    padding-inline: 100px;
   }
 
 }
