@@ -228,7 +228,7 @@ input[type=submit] {
   font-weight: 600;
 }
 
-.bloque button {
+button {
   position: absolute;
   padding: 5px;
   background-color: transparent;
@@ -236,7 +236,7 @@ input[type=submit] {
   bottom: 25px;
 }
 
-.bloque button a {
+button a {
   font-weight: 500;
   font-size: 16px;
   padding: 5px;
@@ -417,10 +417,10 @@ aside nav {
   margin-right: 100px;
 }
 
-aside nav li {
+aside nav ul li {
   list-style: none;
 }
-aside nav li a {
+aside nav ul li a {
   text-transform: capitalize;
 }
 
@@ -486,7 +486,7 @@ figure figcaption p{
 
 }
 
-@media (width <= 1024px) {
+@media (width <= 1550px) {
 
   .tema-titulo {
     font-size: 36px;
@@ -496,28 +496,45 @@ figure figcaption p{
     font-size: 30px;
   }
 
-  .content{
+  .content {
     flex-direction: column;
   }
 
   aside nav {
-    justify-content: center;
-    flex-direction: row;
-    padding-block: 10px;
-    margin: 0;
+    padding: 40px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  aside nav ul {
+    display: flex;
+    justify-content: center;    
+  }
+  
+  aside nav ul li::after {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+    border-radius: 100%; 
+    background-color: var(--var-verde);
+    vertical-align: middle;
   }
 
-  aside nav li a {
-    font-size: 12px;
+  aside nav ul li:last-child:after {
+    width: 0px;
+    height: 0px;
   }
 
+  aside nav ul li a {
+    padding: 4px;
+  }
 
   .lista-animales article {
     flex-direction: column;
     width: 100%;
     padding: 0;
   }
-
 
   figure {
     width: 100%;
@@ -528,6 +545,10 @@ figure figcaption p{
     width: 100%;
   }
 
+  .descripcion p:first-child {
+    margin-block: 10px;
+  }
+
   .animales-peligro {
     padding-inline: 10px;
   }
@@ -536,22 +557,115 @@ figure figcaption p{
     margin-bottom: 50px;
   }
   
+  .lista-animales article div {
+    margin-left: 0;
+  }
+  
   .lista-animales article:last-child {
     margin-bottom: 100px;
   }
-  
+
+  .lista-animales article div:last-child p {
+    font-size: 17px;
+  }
+
   .lista-animales article div {
     width: 100%;
     margin: 0;
-    margin-inline: 10px;
   }
+
 }
 
 
 @media (width <= 430px) {
-
+  
   .tema-titulo {
     padding-inline: 100px;
   }
 
+  aside nav {
+    padding: 0px;
+  }
+
+  aside nav ul li a {
+    font-size: 12px;
+    padding: 4px;
+  }
+}
+
+
+
+.content-blog {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 30px;
+}
+
+.content-blog section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  padding: 20px;
+}
+
+.content-blog section article {
+  height: 800px;
+  position: relative;
+}
+
+.content-blog h3 {
+  font-size: 24px;
+  padding-block: 5px;
+}
+
+.content-blog section div {
+  position: relative;
+  padding: 0;
+}
+
+.content-blog section div img{
+  width: 100%;
+}
+
+.content-blog section div p {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  font-size: 12px;
+  padding: 5px;
+  background-color: var(--var-beige-modificado);
+}
+
+.content-blog article {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.content-blog h3, .content-blog p, .content-blog button {
+  margin-inline: 15px;
+}
+
+.autora {
+  font-size: 16px;
+}
+
+
+
+@media (width <= 1550px) {
+  .content-blog section {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+@media (width <= 430px) {
+  .content-blog section {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
 }
