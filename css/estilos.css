@@ -33,10 +33,6 @@ a::after {
   text-decoration: none;
 }
 
-.background-section-2 {
-  background-image: url(/img/post-fast-fashion.jpg);
-}
-
 footer {
   background: black;
   width: 100%;
@@ -594,25 +590,36 @@ figure figcaption p{
 }
 
 
+/* Blog */
+
 
 .content-blog {
   width: 100%;
   align-items: center;
   justify-content: center;
-  padding-inline: 30px;
+  padding-inline: 60px;
+}
+
+.content-blog h1 {
+  padding-block: 50px 55px;
+  text-align: center;
 }
 
 .content-blog section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
-  gap: 20px;
-  padding: 20px;
+  gap: 40px;
 }
 
 .content-blog section article {
-  height: 800px;
+  height: 100%;
   position: relative;
+}
+
+.content-blog section article button {
+  position: absolute;
+  bottom: 15px;
 }
 
 .content-blog h3 {
@@ -633,10 +640,10 @@ figure figcaption p{
   position: absolute;
   right: 0;
   bottom: 0;
-  margin-right: 10px;
-  margin-bottom: 15px;
-  font-size: 12px;
-  padding: 5px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  padding: 5px 10px;
   background-color: var(--var-beige-modificado);
 }
 
@@ -652,14 +659,38 @@ figure figcaption p{
 
 .autora {
   font-size: 16px;
+  margin-bottom: 100px;
 }
 
+.paginado {
+  padding-block: 70px 90px;
+  text-align: center;
+}
 
+.paginado a {
+  background-color: var(--var-blanco);
+  border: 1px solid var(--var-negro);
+  padding: 5px 10px;
+  margin-inline: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all .2s ease-in-out;
+}
+
+.paginado a:first-child, .paginado a:hover {
+  background-color: var(--var-verde);
+  color: var(--var-blanco);
+  border: 1px solid var(--var-verde);
+}
 
 @media (width <= 1550px) {
   .content-blog section {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
+  }
+
+  .content-blog {
+    padding-inline: 20px;
   }
 }
 
@@ -668,4 +699,89 @@ figure figcaption p{
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
+
+  .content-blog h1 {
+    font-size: 38px;
+    padding-block: 30px 35px;
+  }
+
+  .content-blog section article p {
+    font-size: 16px
+  } 
+}
+
+
+
+
+/* POST */
+
+.introduccion {
+  width: 1140px;
+  margin: auto;
+}
+
+.introduccion h1 {
+  font-size: 68px;
+  margin-bottom: 50px;
+}
+
+.introduccion p {
+  padding-block: 20px;
+}
+
+.barra-navegacion ul {
+  display: flex;
+  list-style: none;
+  padding-block: 30px 40px;
+  font-size: 18px;
+}
+
+.barra-navegacion ul li::after {
+  content:">";
+  font-size: 18px;
+  margin-inline: 5px;
+}
+
+.barra-navegacion ul li:last-child::after {
+  content:"";
+}
+
+.background-section-post {
+  background-image: url(/img/post-fast-fashion.jpg);
+  height: 500px;
+  background-size:cover;
+  background-position: center;
+  margin-left: 0;
+  position: relative;
+}
+
+.content-post {
+  margin-top: 50px;
+}
+
+.content-post section p:first-child {
+  margin-bottom: 30px;
+}
+
+.content-post section article h2 {
+  padding-block: 25px;
+}
+
+figure {
+  width: 850px;
+}
+
+.video-article {
+  text-align: center;
+}
+
+.video-article figure {
+  margin: 0 auto;
+  max-width: 850px; /* Para controlar el tamaño máximo del video */
+}
+
+.video-article iframe {
+  width: 100%;
+  height: 500px;
+  border: none;
 }
