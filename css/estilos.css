@@ -1,3 +1,5 @@
+/* Estilos generales */
+
 :root {
   --var-negro: rgb(0, 0, 0);
   --var-blanco: rgb(255, 255, 255);
@@ -5,8 +7,6 @@
   --var-beige: rgb(242, 242, 230);
   --var-beige-modificado: rgba(242, 242, 230, 0.7);
 }
-
-
 
 *, *::before, *::after {
   padding: 0;
@@ -18,7 +18,6 @@
 body {
   background-color: var(--var-beige);
 }
-
 
 span {
   font-weight: bold;
@@ -40,16 +39,14 @@ footer {
 
 header {
   display: flex;
-  padding-inline: 50px;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 50px;
+  padding: 30px 50px;
   background-color: var(--var-blanco);
   width: 100%;
 }
 
 img {
-  width: fit-content;
   width: 200px;
 }
 
@@ -58,7 +55,7 @@ nav {
 }
 
 nav a {
-  font-size: 14px;
+  font-size: 16px;
   text-transform: uppercase;
   padding-inline: 10px;
   transition: all .2s ease-in-out;
@@ -73,14 +70,49 @@ nav a:hover {
   color: var(--var-verde);
 }
 
-
-.text {
-  text-align: center;
+footer {
+  color: var(--var-blanco);
   display: flex;
-  flex-direction: column;
-  gap: 48px;
-  margin-top: -12px;  
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px 50px;
 }
+
+footer a {
+  color: var(--var-blanco);
+}
+
+.footer-left, .footer-politics{
+  font-size: 12px;
+}
+
+.footer-left img {
+  padding-bottom: 10px;
+  width: 140px;
+}
+
+footer a img {
+  width: 20px;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.footer-politics a {
+  border-right: 1px solid;
+  padding-inline: 5px;
+}
+
+.footer-politics a:last-child {
+  border-right: none;
+}
+
+
+/* Index */
 
 h1 { 
   font-size: 82px;
@@ -103,7 +135,15 @@ h1 {
   color: var(--var-blanco);
 }
 
-.font {
+.text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-top: -12px;  
+}
+
+.fuente {
   position: absolute;
   right: 15px;
   bottom: 15px;
@@ -147,7 +187,7 @@ main p {
 }
 
 .form-article {
-  margin-top: 135px;
+  margin-top: 132px;
   width: 40%;
 }
 
@@ -185,8 +225,10 @@ input[type=submit] {
   border: 1px solid var(--var-negro);
   display: block;
   font-size: 18px;
-  width: 100px;
-  padding-block: 5px;
+  width: 110px;
+  margin-top: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 
 
@@ -194,7 +236,7 @@ input[type=submit] {
   padding-right: 30px;
 }
 
-.historias article {
+.historias div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -219,66 +261,20 @@ input[type=submit] {
   margin-bottom: 50px;
 }
 
-.bloque a {
+.bloque h3 {
   font-size: 26px;
   font-weight: 600;
 }
 
-button {
+.mas {
   position: absolute;
-  padding: 5px;
+  padding: 5px 10px;
   background-color: transparent;
   border: 1px solid black;
   bottom: 25px;
-}
-
-button a {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
-  padding: 5px;
   line-height: 1.6;
-}
-
-
-footer {
-  color: var(--var-blanco);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 30px 50px;
-}
-
-footer a {
-  color: var(--var-blanco);
-}
-
-.footer-left, .footer-politics{
-  font-size: 12px;
-
-}
-
-.footer-left img {
-  padding-bottom: 10px;
-}
-
-footer a img {
-  width: 20px;
-}
-
-.footer-social {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  padding-bottom: 10px;
-}
-
-.footer-politics a {
-  border-right: 1px solid;
-  padding-inline: 5px;
-}
-
-.footer-politics a:last-child {
-  border-right: none;
 }
 
 
@@ -286,6 +282,14 @@ footer a img {
   header, nav {
     flex-direction: column;
     text-align: center;
+  }
+
+  .text h1 {
+    font-size: 70px;
+  }
+
+  .subtitulo {
+    padding-inline: 30px;
   }
 
   nav a {
@@ -298,7 +302,11 @@ footer a img {
   
   main {
     width: 100%;
-    padding-inline: 30px;
+    padding-inline: 10px;
+  }
+  
+  .content-index h2 {
+    font-size: 32px;
   }
 
   main p {
@@ -322,7 +330,7 @@ footer a img {
   }
 
   input {
-    width: 80%;
+    width: 60%;
   }
 
   form div input{
@@ -340,7 +348,6 @@ footer a img {
     padding-right: 0;
   }
 
-
   footer {
     flex-direction: column;
     justify-content: center;
@@ -348,8 +355,10 @@ footer a img {
   }
 
   .footer-social {
-    margin-top: 10px;
+    margin-block: 10px;
+    padding: 0;
     justify-content: center;
+
   }
 
   .footer-politics {
@@ -361,6 +370,7 @@ footer a img {
 
   .footer-politics a {
     border-right: none;
+    padding-block: 5px;
   }
 
 }
@@ -380,7 +390,7 @@ footer a img {
     align-items: start;
   }
 
-  .historias article {
+  .historias div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -479,7 +489,6 @@ figure figcaption p{
 }
 .descripcion p {
   font-size: 20px;
-
 }
 
 @media (width <= 1550px) {
@@ -617,9 +626,10 @@ figure figcaption p{
   position: relative;
 }
 
-.content-blog section article button {
+.content-blog section article .mas {
   position: absolute;
   bottom: 15px;
+  left: 15px;
 }
 
 .content-blog h3 {
@@ -776,10 +786,6 @@ figure figcaption p{
   padding-block: 20px 15px;
 }
 
-figure {
-  width: 850px;
-}
-
 figcaption {
   font-size: 12px;
 }
@@ -856,7 +862,7 @@ figcaption {
   bottom: 15px;
 }
 
-.font-interes {
+.fuente-interes {
   font-size: 12px;
   padding: 0;
   padding-block: 8px;
