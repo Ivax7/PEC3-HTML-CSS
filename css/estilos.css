@@ -32,10 +32,7 @@ a::after {
   text-decoration: none;
 }
 
-footer {
-  background: black;
-  width: 100%;
-}
+
 
 header {
   display: flex;
@@ -54,16 +51,17 @@ nav {
   display: flex;
 }
 
-nav a {
-  font-size: 16px;
+.nav-principal a {
+  font-size: 18px;
   text-transform: uppercase;
-  padding-inline: 10px;
   transition: all .2s ease-in-out;
   font-weight: 600;
 }
 
-.tema {
-  border-right: 1px solid;
+.tema::after {
+  content: "|";
+  position: relative;
+  padding-inline: 15px;
 }
 
 nav a:hover {
@@ -71,6 +69,8 @@ nav a:hover {
 }
 
 footer {
+  background: var(--var-negro);
+  width: 100%;
   color: var(--var-blanco);
   display: flex;
   flex-direction: row;
@@ -80,6 +80,11 @@ footer {
 
 footer a {
   color: var(--var-blanco);
+  transition: all .2s ease-in-out;
+}
+
+footer a:hover {
+  color: var(--var-verde);
 }
 
 .footer-left, .footer-politics{
@@ -102,13 +107,17 @@ footer a img {
   padding-bottom: 15px;
 }
 
-.footer-politics a {
-  border-right: 1px solid;
+.footer-social a:hover img {
+  opacity: 0.7;
+}
+
+.footer-politics a:after {
+  content: "|";
   padding-inline: 5px;
 }
 
-.footer-politics a:last-child {
-  border-right: none;
+.footer-politics a:last-child::after {
+  content: "";
 }
 
 
@@ -209,6 +218,10 @@ form input {
   padding: 10px;
 }
 
+form input:focus {
+  border: 1px solid var(--var-negro);
+}
+
 .form-article .politica-privacidad {
   font-size: 14px;
 }
@@ -270,11 +283,16 @@ input[type=submit] {
   position: absolute;
   padding: 5px 10px;
   background-color: transparent;
-  border: 1px solid black;
+  border: 1px solid var(--var-negro);
   bottom: 25px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.6;
+  transition: all .2s ease-in-out;
+}
+
+.mas:hover, input[type="submit"]:hover {
+  border: 1px solid var(--var-verde)
 }
 
 
@@ -296,8 +314,9 @@ input[type=submit] {
     margin-block: 5px;
   }
 
-  nav a:first-child {
-    border-right: none;
+  .tema:after {
+    content: "";
+    padding: 0;
   }
   
   main {
@@ -369,8 +388,11 @@ input[type=submit] {
   }
 
   .footer-politics a {
-    border-right: none;
     padding-block: 5px;
+  }
+
+  .footer-politics a::after {
+    content: "";
   }
 
 }
@@ -417,6 +439,7 @@ h1 span {
 aside nav {
   display: flex;
   flex-direction: column;
+  font-weight: 600;
   height: 100%;
   width: 100%;
   padding: 60px 100px 0 50px;
@@ -426,8 +449,10 @@ aside nav {
 aside nav ul li {
   list-style: none;
 }
+
 aside nav ul li a {
   text-transform: capitalize;
+  transition: all .2s ease-in-out;
 }
 
 .tema-titulo {
@@ -441,7 +466,7 @@ aside nav ul li a {
   padding-bottom: 10px;
 }
 
-.animales-peligro {
+.tema-content {
   width: 100%;
 }
 
@@ -487,11 +512,12 @@ figure figcaption p{
   flex: 1;
   margin-left: 40px;
 }
+
 .descripcion p {
   font-size: 20px;
 }
 
-@media (width <= 1550px) {
+@media (width <= 1024px) {
 
   .tema-titulo {
     font-size: 36px;
@@ -554,7 +580,7 @@ figure figcaption p{
     margin-block: 10px;
   }
 
-  .animales-peligro {
+  .tema-content {
     padding-inline: 10px;
   }
 
@@ -584,6 +610,9 @@ figure figcaption p{
 
 @media (width <= 430px) {
   
+  h1 span {
+    padding-block: 5px;
+  }
   .tema-titulo {
     padding-inline: 100px;
   }
@@ -601,7 +630,6 @@ figure figcaption p{
 
 /* Blog */
 
-
 .content-blog {
   width: 100%;
   align-items: center;
@@ -610,7 +638,7 @@ figure figcaption p{
 }
 
 .content-blog h1 {
-  padding-block: 50px 55px;
+  padding-block: 50px 60px;
   text-align: center;
 }
 
@@ -633,8 +661,21 @@ figure figcaption p{
 }
 
 .content-blog h3 {
-  font-size: 24px;
+  font-size: 28px;
   padding-block: 5px;
+  transition: all .2s ease-in-out;
+}
+
+.content-blog h3 a {
+  transition: all .2s ease-in-out;
+}
+
+.content-blog h3 a:hover {
+  color: var(--var-verde);
+}
+
+.content-blog p {
+  font-size: 21px;
 }
 
 .content-blog section div {
@@ -660,16 +701,15 @@ figure figcaption p{
 .content-blog article {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
-  border-radius: 8px;
 }
 
-.content-blog h3, .content-blog p, .content-blog button {
+.content-blog h3, .content-blog p {
   margin-inline: 15px;
 }
 
 .autora {
   font-size: 16px;
-  margin-bottom: 100px;
+  margin-block: 20px 100px;
 }
 
 .paginado {
@@ -693,7 +733,15 @@ figure figcaption p{
   border: 1px solid var(--var-verde);
 }
 
-@media (width <= 1550px) {
+abbr {
+  cursor: help;
+}
+
+@media (width <= 1024px) {
+  
+  .content-blog h1 {
+    font-size: 44px;
+  }
   .content-blog section {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
@@ -721,9 +769,7 @@ figure figcaption p{
 }
 
 
-
-
-/* POST */
+/* Post */
 
 .introduccion {
   width: 1140px;
@@ -758,6 +804,12 @@ figure figcaption p{
 
 .barra-navegacion ul li:last-child::after {
   content:"";
+}
+.barra-navegacion a {
+  transition: all .2s ease-in-out;
+}
+.barra-navegacion a:hover {
+  color: var(--var-verde);
 }
 
 .background-section-post {
@@ -835,7 +887,7 @@ figcaption {
 .intereses-imagenes article {
   background-color: var(--var-blanco);
   position: relative;
-  height: 425px;
+  height: 450px;
 }
 
 .intereses-imagenes article div {
@@ -857,7 +909,7 @@ figcaption {
   border-bottom: none;
 }
 
-.intereses-imagenes article button {
+.intereses-imagenes article .mas {
   left: 15px;
   bottom: 15px;
 }
