@@ -133,7 +133,7 @@ h1 {
 
 .background-section-index {
   position: relative;
-  background-image: url("../img/hero-image-home.jpg");
+  background-image: url(/img/hero-image-home.jpg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -540,7 +540,7 @@ abbr {
 }
 
 .background-section-post {
-  background-image: url("../img/post-fast-fashion.jpg");
+  background-image: url(/img/post-fast-fashion.jpg);
   height: 500px;
   background-size:cover;
   background-position: center;
