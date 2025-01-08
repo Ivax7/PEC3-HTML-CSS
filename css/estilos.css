@@ -540,7 +540,7 @@ abbr {
 }
 
 .background-section-post {
-  background-image: url("../img/post-fast-fashion.jpg");
+  background-image: url("/img/post-fast-fashion.jpg");
   height: 500px;
   background-size:cover;
   background-position: center;
